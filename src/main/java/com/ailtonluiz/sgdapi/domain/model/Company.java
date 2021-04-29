@@ -1,9 +1,10 @@
-package com.ailtonluiz.sgdapi.model;
+package com.ailtonluiz.sgdapi.domain.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -36,4 +37,9 @@ public class Company {
     @Embedded
     private Address address;
 
+
+    @ManyToMany
+    @JoinTable(name = "company_user", joinColumns = @JoinColumn(name = "company_id", foreignKey = @ForeignKey(name = "fk_company_user_company_id")),
+            inverseJoinColumns = @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "fk_company_user_user_id")))
+    private List<User> users;
 }

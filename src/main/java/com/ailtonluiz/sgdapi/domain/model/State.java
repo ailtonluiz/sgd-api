@@ -1,16 +1,14 @@
-package com.ailtonluiz.sgdapi.model;
-
+package com.ailtonluiz.sgdapi.domain.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.*;
 
 @Entity
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Country {
+public class State {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +18,7 @@ public class Country {
     @Column(length = 150)
     private String name;
 
-    @Column(length = 4)
-    private String shortName;
+    @ManyToOne
+    @JoinColumn(name = "country_id", foreignKey = @ForeignKey(name = "fk_country_state"))
+    private Country country;
 }

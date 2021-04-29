@@ -1,4 +1,4 @@
-package com.ailtonluiz.sgdapi.model;
+package com.ailtonluiz.sgdapi.domain.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -6,15 +6,16 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 
 @Entity
-@Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Brand {
+@Data
+public class ProductGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Column(length = 80)
+    @Column(length = 60)
     private String name;
+
 }

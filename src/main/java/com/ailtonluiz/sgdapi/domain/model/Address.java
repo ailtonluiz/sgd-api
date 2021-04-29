@@ -1,4 +1,5 @@
-package com.ailtonluiz.sgdapi.model;
+package com.ailtonluiz.sgdapi.domain.model;
+
 
 import lombok.Data;
 

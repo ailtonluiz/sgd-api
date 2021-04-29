@@ -1,4 +1,4 @@
-package com.ailtonluiz.sgdapi.model;
+package com.ailtonluiz.sgdapi.domain.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,12 +13,12 @@ public class Unity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id;
+    private Long id;
 
     @Column(name = "description", length = 60)
     private String description;
 
-    @Column(name = "short_description", length = 3)
+    @Column(length = 3)
     private String shortDescription;
 
 
