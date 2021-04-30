@@ -30,4 +30,8 @@ public class Client {
     @Enumerated(EnumType.STRING)
     @Column(length = 10)
     private Status status;
+
+    @ManyToOne
+    @JoinColumn(name = "client_group_id", foreignKey = @ForeignKey(name = "fk_client_group"))
+    private ClientGroup clientGroup;
 }

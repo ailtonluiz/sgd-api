@@ -29,8 +29,8 @@ CREATE TABLE state
 CREATE TABLE city
 (
     id       BIGINT       NOT NULL AUTO_INCREMENT,
-    name     VARCHAR(150) NULL DEFAULT NULL,
-    state_id BIGINT       NULL DEFAULT NULL,
+    name     VARCHAR(150) NULL NOT NULL,
+    state_id BIGINT       NULL NOT NULL,
     PRIMARY KEY (id),
     INDEX fk_state_city (state_id ASC) VISIBLE,
     CONSTRAINT fk_state_city
