@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "dfe69eb9-281f-4f47-85b4-9a51fbc92278",
+		"name": "SGD - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "List Brands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.delivery.local:6789/brands",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Brand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"name\": \"HP\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.delivery.local:6789/brands",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "List City",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.delivery.local:6789/cities",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "State",
+			"item": [
+				{
+					"name": "List State",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.delivery.local:6789/states",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"states"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert State",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"name\": \"Rio de Janeiro\",\r\n        \"shortName\" : \"RJ\",\r\n        \"country\": {\r\n            \"id\": 2\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.delivery.local:6789/states",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"states"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Country",
+			"item": [
+				{
+					"name": "List Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.delivery.local:6789/countries",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Country",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"name\": \"Chile\",\r\n        \"shortName\": \"CH\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.delivery.local:6789/countries",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "List Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.delivery.local:6789/clients",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Clients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"name\": \"Chile\",\r\n        \"shortName\": \"CH\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.delivery.local:6789/clients",
+							"protocol": "http",
+							"host": [
+								"api",
+								"delivery",
+								"local"
+							],
+							"port": "6789",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
