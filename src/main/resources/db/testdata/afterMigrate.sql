@@ -143,5 +143,15 @@ INSERT INTO supplier (id, complement, district, number, street, email, name, not
 VALUES (1, '2 ER 5', 'Pas de La Casa', '17', 'Carrer Major', 'ailtonluiz@icloud.com', 'Fornecedor Padrao',
         'CADASTRO DE TESTE', '376 610-680', 'ACTIVE', 1, 1);
 
-INSERT INTO company (id, accountable, complement, district, number, street, company_fantasy, company_name, email, manager, phone, city_id)
-VALUES (1,'Responsavel','teste','Bairro','1','RUA','NOME FANTASIA','EMPRESA PADRAO','email@email.com','Gerente','1245798','1');
+INSERT INTO company (id, accountable, complement, district, number, street, company_fantasy, company_name, email,
+                     manager, phone, city_id)
+VALUES (1, 'Responsavel', 'teste', 'Bairro', '1', 'RUA', 'NOME FANTASIA', 'EMPRESA PADRAO', 'email@email.com',
+        'Gerente', '1245798', '1');
+
+INSERT INTO user_group (id, name)
+VALUES (1, 'Administrator');
+
+INSERT INTO user (id, name, email, phone, password, status)
+VALUES (1, 'Ailton Luiz', 'ailtonluiz@icloud.com','376610680', 'PASSWORD', 'ACTIVE');
+
+INSERT INTO company_user (company_id, user_id) VALUES (1,1);
