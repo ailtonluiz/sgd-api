@@ -151,7 +151,8 @@ VALUES (1, 'Responsavel', 'teste', 'Bairro', '1', 'RUA', 'NOME FANTASIA', 'EMPRE
 INSERT INTO user_group (id, name)
 VALUES (1, 'Administrator');
 
-INSERT INTO user (id, name, email, phone, password, status)
-VALUES (1, 'Ailton Luiz', 'ailtonluiz@icloud.com','376610680', 'PASSWORD', 'ACTIVE');
+INSERT INTO user (id, name, email, phone, password, status, user_group_id)
+VALUES (1, 'Ailton Luiz', 'ailtonluiz@icloud.com', '376610680', 'PASSWORD', 'ACTIVE', 1);
 
-INSERT INTO company_user (company_id, user_id) VALUES (1,1);
+INSERT INTO company_user (company_id, user_id)
+VALUES (1, 1);

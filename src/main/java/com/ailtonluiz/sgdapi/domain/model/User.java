@@ -42,4 +42,8 @@ public class User {
 
     @ManyToMany(mappedBy = "users")
     private List<Company> companies;
+
+    @ManyToOne
+    @JoinColumn(name = "user_group_id", foreignKey = @ForeignKey(name = "fk_user_group"))
+    private UserGroup userGroup;
 }
