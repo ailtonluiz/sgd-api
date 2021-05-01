@@ -18,6 +18,10 @@ public class State {
     @Column(length = 150)
     private String name;
 
+    @Column(length = 4)
+    private String shortName;
+
+
     @ManyToOne
     @JoinColumn(name = "country_id", foreignKey = @ForeignKey(name = "fk_country_state"))
     private Country country;
