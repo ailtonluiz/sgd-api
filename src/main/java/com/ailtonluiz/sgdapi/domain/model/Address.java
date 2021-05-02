@@ -28,7 +28,6 @@ public class Address {
     @Transient
     private State state;
 
-    @Transient
-    private Country country;
+
 
 }

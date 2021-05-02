@@ -22,7 +22,5 @@ public class State {
     private String shortName;
 
 
-    @ManyToOne
-    @JoinColumn(name = "country_id", foreignKey = @ForeignKey(name = "fk_country_state"))
-    private Country country;
+
 }

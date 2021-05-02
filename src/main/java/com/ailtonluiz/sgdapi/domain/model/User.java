@@ -18,7 +18,7 @@ public class User {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @NotNull
+    @NotBlank
     @Column(length = 100)
     private String name;
 

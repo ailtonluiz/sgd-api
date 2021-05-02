@@ -3,8 +3,6 @@ SET foreign_key_checks = 0;
 DELETE
 FROM brand;
 DELETE
-FROM country;
-DELETE
 FROM city;
 DELETE
 FROM state;
@@ -49,8 +47,7 @@ SET foreign_key_checks = 1;
 
 ALTER TABLE brand
     AUTO_INCREMENT = 1;
-ALTER TABLE country
-    AUTO_INCREMENT = 1;
+
 ALTER TABLE city
     AUTO_INCREMENT = 1;
 ALTER TABLE state
@@ -98,12 +95,7 @@ VALUES (2, 'Philips');
 INSERT INTO brand (id, name)
 VALUES (3, 'LG');
 
-INSERT INTO country (id, name, short_name)
-VALUES (1, 'Andorra', 'AND');
-INSERT INTO country (id, name, short_name)
-VALUES (2, 'Brasil', 'BR');
-INSERT INTO country (id, name, short_name)
-VALUES (3, 'Peru', 'PE');
+
 
 INSERT INTO state (id, name, short_name, country_id)
 VALUES (1, 'Andorra', 'AND', 1);
