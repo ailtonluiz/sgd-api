@@ -1,8 +1,9 @@
 package com.ailtonluiz.sgdapi.api.v1;
 
 
-import com.ailtonluiz.sgdapi.api.controller.CitiesController;
-import com.ailtonluiz.sgdapi.api.controller.StatesController;
+import com.ailtonluiz.sgdapi.api.v1.controller.CitiesController;
+import com.ailtonluiz.sgdapi.api.v1.controller.PaymentMethodsController;
+import com.ailtonluiz.sgdapi.api.v1.controller.StatesController;
 import org.springframework.hateoas.*;
 import org.springframework.hateoas.TemplateVariable.VariableType;
 import org.springframework.stereotype.Component;
@@ -55,6 +56,23 @@ public class SgdLinks {
         return linkToStates(IanaLinkRelations.SELF.value());
     }
 
+    public Link linkToPaymentMethod(Long paymentMethodId, String rel) {
+        return linkTo(methodOn(PaymentMethodsController.class)
+                .search(paymentMethodId, null)).withRel(rel);
+    }
+
+    public Link linkToPaymentMethod(Long paymentMethodId) {
+        return linkToPaymentMethod(paymentMethodId, IanaLinkRelations.SELF.value());
+    }
+
+    public Link linkToPaymentMethods(String rel) {
+        return linkTo(PaymentMethodsController.class).withRel(rel);
+    }
+
+    public Link linkToPaymentMethods() {
+        return linkToPaymentMethods(IanaLinkRelations.SELF.value());
+    }
+
 	
 	/*public Link linkToPedidos(String rel) {
 		TemplateVariables filtroVariables = new TemplateVariables(
@@ -103,24 +121,24 @@ public class SgdLinks {
 		return linkToRestaurantes(IanaLinkRelations.SELF.value());
 	}
 	
-	public Link linkToRestauranteFormasPagamento(Long restauranteId, String rel) {
-		return linkTo(methodOn(RestauranteFormaPagamentoController.class)
+	public Link linkToRestaurantePaymentMethods(Long restauranteId, String rel) {
+		return linkTo(methodOn(RestaurantePaymentMethodController.class)
 				.listar(restauranteId)).withRel(rel);
 	}
 	
-	public Link linkToRestauranteFormasPagamento(Long restauranteId) {
-		return linkToRestauranteFormasPagamento(restauranteId, IanaLinkRelations.SELF.value());
+	public Link linkToRestaurantePaymentMethods(Long restauranteId) {
+		return linkToRestaurantePaymentMethods(restauranteId, IanaLinkRelations.SELF.value());
 	}
 	
-	public Link linkToRestauranteFormaPagamentoDesassociacao(
-			Long restauranteId, Long formaPagamentoId, String rel) {
+	public Link linkToRestaurantePaymentMethodDesassociacao(
+			Long restauranteId, Long paymentMethodId, String rel) {
 		
-		return linkTo(methodOn(RestauranteFormaPagamentoController.class)
-				.desassociar(restauranteId, formaPagamentoId)).withRel(rel);
+		return linkTo(methodOn(RestaurantePaymentMethodController.class)
+				.desassociar(restauranteId, paymentMethodId)).withRel(rel);
 	}
 	
-	public Link linkToRestauranteFormaPagamentoAssociacao(Long restauranteId, String rel) {
-		return linkTo(methodOn(RestauranteFormaPagamentoController.class)
+	public Link linkToRestaurantePaymentMethodAssociacao(Long restauranteId, String rel) {
+		return linkTo(methodOn(RestaurantePaymentMethodController.class)
 				.associar(restauranteId, null)).withRel(rel);
 	}
 	
@@ -236,22 +254,7 @@ public class SgdLinks {
 				.associar(restauranteId, null)).withRel(rel);
 	}
 	
-	public Link linkToFormaPagamento(Long formaPagamentoId, String rel) {
-		return linkTo(methodOn(FormaPagamentoController.class)
-				.buscar(formaPagamentoId, null)).withRel(rel);
-	}
-	
-	public Link linkToFormaPagamento(Long formaPagamentoId) {
-		return linkToFormaPagamento(formaPagamentoId, IanaLinkRelations.SELF.value());
-	}
-	
-	public Link linkToFormasPagamento(String rel) {
-		return linkTo(FormaPagamentoController.class).withRel(rel);
-	}
-	
-	public Link linkToFormasPagamento() {
-		return linkToFormasPagamento(IanaLinkRelations.SELF.value());
-	}
+
 	
 
 	public Link linkToProduto(Long restauranteId, Long produtoId, String rel) {

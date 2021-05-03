@@ -91,12 +91,13 @@ public class SgdSecurity {
         return isAuthenticated() && hasScopeRead();
     }
 
-    //Can Consult Payment Methods
+
     public boolean canConsultPaymentMethods() {
         return isAuthenticated() && hasScopeRead();
     }
 
     public boolean canConsultCities() {
+
         return isAuthenticated() && hasScopeRead();
     }
 

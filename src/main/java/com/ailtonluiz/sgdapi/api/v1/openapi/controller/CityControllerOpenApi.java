@@ -28,7 +28,7 @@ public interface CityControllerOpenApi {
 
     @ApiOperation("Register city")
     @ApiResponses({
-            @ApiResponse(code = 201, message = "City cadastrada"),
+            @ApiResponse(code = 201, message = "City created"),
     })
     CityModel add(
             @ApiParam(name = "body", value = "Representação de uma nova city", required = true)

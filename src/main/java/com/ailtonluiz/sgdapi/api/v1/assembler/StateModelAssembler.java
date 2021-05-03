@@ -1,7 +1,7 @@
 package com.ailtonluiz.sgdapi.api.v1.assembler;
 
 
-import com.ailtonluiz.sgdapi.api.controller.StatesController;
+import com.ailtonluiz.sgdapi.api.v1.controller.StatesController;
 import com.ailtonluiz.sgdapi.api.v1.SgdLinks;
 import com.ailtonluiz.sgdapi.api.v1.model.StateModel;
 import com.ailtonluiz.sgdapi.core.security.SgdSecurity;

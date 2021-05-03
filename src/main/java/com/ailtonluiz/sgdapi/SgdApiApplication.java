@@ -12,8 +12,11 @@ import java.util.TimeZone;
 public class SgdApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SgdApiApplication.class, args);
+
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+
+        SpringApplication.run(SgdApiApplication.class, args);
+
     }
 
 }

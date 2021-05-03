@@ -1,6 +1,6 @@
 package com.ailtonluiz.sgdapi.api.v1.assembler;
 
-import com.ailtonluiz.sgdapi.api.controller.CitiesController;
+import com.ailtonluiz.sgdapi.api.v1.controller.CitiesController;
 import com.ailtonluiz.sgdapi.api.v1.SgdLinks;
 import com.ailtonluiz.sgdapi.api.v1.model.CityModel;
 import com.ailtonluiz.sgdapi.core.security.SgdSecurity;

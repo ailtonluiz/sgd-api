@@ -1,4 +1,4 @@
-package com.ailtonluiz.sgdapi.api.controller;
+package com.ailtonluiz.sgdapi.api.v1.controller;
 
 import com.ailtonluiz.sgdapi.domain.exception.EntityInUseException;
 import com.ailtonluiz.sgdapi.domain.model.Client;

@@ -1,11 +1,8 @@
-package com.ailtonluiz.sgdapi.api.controller;
+package com.ailtonluiz.sgdapi.api.v1.controller;
 
 import com.ailtonluiz.sgdapi.domain.exception.EntityInUseException;
-import com.ailtonluiz.sgdapi.domain.model.Brand;
 import com.ailtonluiz.sgdapi.domain.model.City;
-import com.ailtonluiz.sgdapi.domain.repository.BrandRepository;
 import com.ailtonluiz.sgdapi.domain.repository.CityRepository;
-import com.ailtonluiz.sgdapi.domain.service.RegisterBrandService;
 import com.ailtonluiz.sgdapi.domain.service.RegisterCityService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
